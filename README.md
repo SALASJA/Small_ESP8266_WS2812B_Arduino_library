@@ -57,5 +57,6 @@ if above doesnt work we might try to make it bigger
 
 and we might do this for a couple of bigger values until we give up and try other stuff.
 
-Anyways, im only doing this because I have no deep knowledge of the timings or the protocol. Since
+Anyways, im only doing this because I have no deep knowledge of the timings or the protocol, but i do know 
+the times are extremely important. Since
 the code works 95% well, I'm guessing the change must be made here.
