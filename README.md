@@ -12,24 +12,24 @@ in better detail.
 Assumming there is nothing wrong with the logic of the algorithm and assuming all that needs to change are the
 constants:
 
-#define CYCLES_800_T0H  (F_CPU / 2500000) // 0.4us
-#define CYCLES_800_T1H  (F_CPU / 1250000) // 0.8us
-#define CYCLES_800      (F_CPU /  800000) // 1.25us per bit
+- #define CYCLES_800_T0H  (F_CPU / 2500000) // 0.4us
+- #define CYCLES_800_T1H  (F_CPU / 1250000) // 0.8us
+- #define CYCLES_800      (F_CPU /  800000) // 1.25us per bit
 
 (for example making 2500000 bigger)
 
 and suppose for all three of the constants i have 3 choices:
 
-b - to make bigger
-n - no change
-s - to make smaller
+- b - to make bigger
+- n - no change
+- s - to make smaller
 
 
 so one possible edit i can do is 
 
-#define CYCLES_800_T0H  (F_CPU / 2500010) //b - made bigger
-#define CYCLES_800_T1H  (F_CPU / 1250000) //n - no change
-#define CYCLES_800      (F_CPU /  800000) //n - no change
+- #define CYCLES_800_T0H  (F_CPU / 2500010) //b - made bigger
+- #define CYCLES_800_T1H  (F_CPU / 1250000) //n - no change
+- #define CYCLES_800      (F_CPU /  800000) //n - no change
 
 so we can symbolically represent this change in our notes as the tuple (b,n,n)
 
@@ -44,15 +44,15 @@ make one one of the values bigger:
 
 this below is already one situation
 
-#define CYCLES_800_T0H  (F_CPU / 2500010) //b - made bigger
-#define CYCLES_800_T1H  (F_CPU / 1250000) //n - no change
-#define CYCLES_800      (F_CPU /  800000) //n - no change 
+- #define CYCLES_800_T0H  (F_CPU / 2500010) //b - made bigger
+- #define CYCLES_800_T1H  (F_CPU / 1250000) //n - no change
+- #define CYCLES_800      (F_CPU /  800000) //n - no change 
 
 if above doesnt work we might try to make it bigger
 
-#define CYCLES_800_T0H  (F_CPU / 2500020) //b - made bigger
-#define CYCLES_800_T1H  (F_CPU / 1250000) //n - no change
-#define CYCLES_800      (F_CPU /  800000) //n - no change 
+- #define CYCLES_800_T0H  (F_CPU / 2500020) //b - made bigger
+- #define CYCLES_800_T1H  (F_CPU / 1250000) //n - no change
+- #define CYCLES_800      (F_CPU /  800000) //n - no change 
 
 
 and we might do this for a couple of bigger values until we give up and try other stuff.
