@@ -5,5 +5,5 @@ repository isolates the esp8266 protocol used in the Neopixel Library. It works 
 except there is flickering. I only tested this on the esp01. Logically it should work, I suspect
 that because there is less code, it runs a little faster, somehow affecting the protocol. Since
 the random flicker is very very minor, I suspect there should be a very small change in the directive constants
-in  ws2812b_protocol.h . If I had more experience with electronics and an oscilloscope, I could explain all
-of this in better detail. 
+in  ws2812b_protocol.h . If I had more experience with electronics and an oscilloscope, I could tackle this issue
+in better detail. 
